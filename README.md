@@ -60,9 +60,9 @@ Instalación de Symfony, creación de usuarios con validación por email y acces
 
 # Referencias
 
-https://symfony.com/doc/5.4/security/user_providers.html
-https://symfony.com/doc/master/mailer.html
-https://symfony.com/bundles/LexikJWTAuthenticationBundle/current/index.html#installatio
-https://symfony.com/doc/5.4/security.html#form-login
-https://www.youtube.com/watch?v=PxToeu4ySxU
+- https://symfony.com/doc/5.4/security/user_providers.html
+- https://symfony.com/doc/master/mailer.html
+- https://symfony.com/bundles/LexikJWTAuthenticationBundle/current/index.html#installatio
+- https://symfony.com/doc/5.4/security.html#form-login
+- https://www.youtube.com/watch?v=PxToeu4ySxU
 
