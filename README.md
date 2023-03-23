@@ -12,7 +12,6 @@ Instalación de Symfony, creación de usuarios con validación por email y acces
 - PHP: PHP 8.2.3 (cli). Por ejemplo se puede descargar en OSX con: https://formulae.brew.sh/formula/php
 - Composer: https://getcomposer.org/download/
 
-
 # Pasos para la instalación de Symfomy y paquetes
 
 - symfony new symfony-token --version=5.4
@@ -25,3 +24,8 @@ Instalación de Symfony, creación de usuarios con validación por email y acces
 - composer require symfony/mailer 
 - composer require --dev symfony/profiler-pack 
 - composer require "lexik/jwt-authentication-bundle"
+
+# Configuración y creación de entidades
+
+- Modificamos el .env para que genere un sqlite (https://www.sqlite.org/index.html)
+
