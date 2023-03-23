@@ -33,12 +33,15 @@ Instalación de Symfony, creación de usuarios con validación por email y acces
 - Formulario de Login: php bin/console make:auth (Opción: Login form authenticator)
 - Claves públicas y privadas de jwt: php bin/console lexik:jwt:generate-keypair
 - Actualizamos la base de datos: php bin/console doctrine:schema:update --force (2 queries were executed)
+- En env. añadimos: MAILER_DSN="smtp://xxxxx:yyyyy@smtp1.s.ipzmarketing.com:587" (Actualizar usuario y contraseña)
+- Levantar servidor: symfony server:start -d 
 
 
 # Rutas de la aplicación:
 
 | URL path                    | Description           | 
 | :--------------------------:|:---------------------:|
+| /home                    |  Página en blanco|
 | /register                    |  Registro de usuarios| 
 | /login                       |  Login               |
 | /logout                      |  Logout                |
