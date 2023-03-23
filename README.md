@@ -29,4 +29,5 @@ Instalación de Symfony, creación de usuarios con validación por email y acces
 
 - Modificamos el .env para que genere un sqlite (https://www.sqlite.org/index.html)
 - Crear usuario php bin/console make:user
+- php bin/console make:registration-form (Con email to verify the user's)
 
