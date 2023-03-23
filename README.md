@@ -34,6 +34,10 @@ Instalación de Symfony, creación de usuarios con validación por email y acces
 - Claves públicas y privadas de jwt: php bin/console lexik:jwt:generate-keypair
 - Actualizamos la base de datos: php bin/console doctrine:schema:update --force (2 queries were executed)
 - En env. añadimos: MAILER_DSN="smtp://xxxxx:yyyyy@smtp1.s.ipzmarketing.com:587" (Actualizar usuario y contraseña)
+- Control de acceso por rol admin en el security.yaml - { path: ^/admin, roles: ROLE_ADMIN }
+- En la base de dato en el usuario seleccionado se puede añadir en rol: ["ROLE_ADMIN"] (Por defecto podría añadir un rol en el entity de user)
+- En el Registration controller, en la linea 56, cambiar la ruta a home o a la ruta que quieres ir una vez registrado
+- En el src/Security/AppCustomAutheticator.php en la linea 50 especificar a dónde quieres llegar una vez realizado el login
 - Levantar servidor: symfony server:start -d 
 
 
