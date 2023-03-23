@@ -54,6 +54,9 @@ Instalación de Symfony, creación de usuarios con validación por email y acces
 | /login                       |  Login               |
 | /logout                      |  Logout                |
 | /admin                      |   Acceso restringido              |
+| /api/login_check            |  Logarse enviando el username y el password              |
+| /checktoken                      |  Descifrar el token               |
+| /api/test                      |   Acceder a ruta con un token              |
 
 # Referencias
 
