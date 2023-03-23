@@ -45,4 +45,5 @@ Instalación de Symfony, creación de usuarios con validación por email y acces
 | /register                    |  Registro de usuarios| 
 | /login                       |  Login               |
 | /logout                      |  Logout                |
+| /admin                      |   Acceso restringido              |
 
