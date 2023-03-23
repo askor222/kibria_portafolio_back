@@ -1,6 +1,7 @@
 # symfony-token
 
 <img src="https://jorgebenitezlopez.com/github/symfony.jpg">
+<img src="https://img.shields.io/static/v1?label=PHP&message=Symfony&color=green">
 
 # Symfony token
 
@@ -41,7 +42,10 @@ Instalación de Symfony, creación de usuarios con validación por email y acces
 - Configuración del config/packages/security.ymal para el funcionamiento del jwt 
 - Creado un controlador para comprobar el token: ChecktokenController.php
 - Levantar servidor: symfony server:start -d 
+- Hacer pruebas con postman: https://www.postman.com/
 
+<img src="https://jorgebenitezlopez.com/github/postman1.png">
+<img src="https://jorgebenitezlopez.com/github/postman2.png">
 
 # Rutas de la aplicación:
 
