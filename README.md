@@ -16,3 +16,12 @@ Instalación de Symfony, creación de usuarios con validación por email y acces
 # Pasos para la instalación de Symfomy y paquetes
 
 - symfony new symfony-token --version=5.4
+- composer require symfony/orm-pack
+- composer require symfony/maker-bundle
+- composer update
+- composer require form validator twig-bundle security-csrf annotations
+- composer require symfony/security-bundle
+- composer require symfonycasts/verify-email-bundle
+- composer require symfony/mailer 
+- composer require --dev symfony/profiler-pack 
+- composer require "lexik/jwt-authentication-bundle"
