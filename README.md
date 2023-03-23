@@ -1,5 +1,3 @@
-# symfony-token
-
 <img src="https://jorgebenitezlopez.com/github/symfony.jpg">
 <img src="https://img.shields.io/static/v1?label=PHP&message=Symfony&color=green">
 
