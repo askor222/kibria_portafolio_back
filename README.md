@@ -38,6 +38,8 @@ Instalación de Symfony, creación de usuarios con validación por email y acces
 - En la base de dato en el usuario seleccionado se puede añadir en rol: ["ROLE_ADMIN"] (Por defecto podría añadir un rol en el entity de user)
 - En el Registration controller, en la linea 56, cambiar la ruta a home o a la ruta que quieres ir una vez registrado
 - En el src/Security/AppCustomAutheticator.php en la linea 50 especificar a dónde quieres llegar una vez realizado el login
+- Configuración del config/packages/security.ymal para el funcionamiento del jwt 
+- Creado un controlador para comprobar el token: ChecktokenController.php
 - Levantar servidor: symfony server:start -d 
 
 
@@ -50,4 +52,12 @@ Instalación de Symfony, creación de usuarios con validación por email y acces
 | /login                       |  Login               |
 | /logout                      |  Logout                |
 | /admin                      |   Acceso restringido              |
+
+# Referencias
+
+https://symfony.com/doc/5.4/security/user_providers.html
+https://symfony.com/doc/master/mailer.html
+https://symfony.com/bundles/LexikJWTAuthenticationBundle/current/index.html#installatio
+https://symfony.com/doc/5.4/security.html#form-login
+https://www.youtube.com/watch?v=PxToeu4ySxU
 
