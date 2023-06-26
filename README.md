@@ -3,12 +3,12 @@
 
 # Symfony token
 
-Instalación de Symfony, creación de usuarios con validación por email y acceso pr token
+Instalación de Symfony, creación de usuarios con validación por email y acceso por token
 
 # Requisitos
 
 - Symfony CLI: https://symfony.com/download
-- PHP: PHP 8.2.3 (cli). Por ejemplo se puede descargar en OSX con: https://formulae.brew.sh/formula/php
+- PHP 8.2.3 (cli). Por ejemplo se puede descargar en OSX con: https://formulae.brew.sh/formula/php
 - Composer: https://getcomposer.org/download/
 
 # Pasos para la instalación de Symfomy y paquetes
@@ -29,8 +29,8 @@ Instalación de Symfony, creación de usuarios con validación por email y acces
 - Modificamos el .env para que genere un sqlite (https://www.sqlite.org/index.html)
 - Crear usuario:  php bin/console make:user
 - Formulario de registro: php bin/console make:registration-form (Con email to verify the user's)
-- Formulario de Login: php bin/console make:auth (Opción: Login form authenticator)
-- Claves públicas y privadas de jwt: php bin/console lexik:jwt:generate-keypair
+- Formulario de login: php bin/console make:auth (Opción: Login form authenticator)
+- Generar las claves públicas y privadas de jwt: php bin/console lexik:jwt:generate-keypair
 - Actualizamos la base de datos: php bin/console doctrine:schema:update --force (2 queries were executed)
 - En env. añadimos: MAILER_DSN="smtp://xxxxx:yyyyy@smtp1.s.ipzmarketing.com:587" (Actualizar usuario y contraseña)
 - Control de acceso por rol admin en el security.yaml - { path: ^/admin, roles: ROLE_ADMIN }
@@ -49,12 +49,12 @@ Instalación de Symfony, creación de usuarios con validación por email y acces
 
 | URL path                    | Description           | 
 | :--------------------------:|:---------------------:|
-| /home                    |  Página en blanco|
+| /                    |  Página en blanco|
 | /register                    |  Registro de usuarios| 
 | /login                       |  Login               |
 | /logout                      |  Logout                |
 | /admin                      |   Acceso restringido              |
-| /api/login_check            |  Logarse enviando el username y el password              |
+| /api/login_check            |  Logarse enviando el username y el password por GET             |
 | /checktoken                      |  Descifrar el token               |
 | /api/test                      |   Acceder a ruta con un token              |
 
