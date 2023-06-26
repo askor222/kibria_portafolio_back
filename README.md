@@ -23,6 +23,8 @@ Instalación de Symfony, creación de usuarios con validación por email y acces
 - composer require symfony/mailer 
 - composer require --dev symfony/profiler-pack 
 - composer require "lexik/jwt-authentication-bundle"
+- symfony composer require api (Para habilitar el CORS)
+
 
 # Configuración y creación de entidades
 
