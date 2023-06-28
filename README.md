@@ -25,16 +25,15 @@ Instalación de Symfony, creación de usuarios con validación por email y acces
 - composer require "lexik/jwt-authentication-bundle"
 - symfony composer require api (Para habilitar el CORS)
 
-
 # Configuración y creación de entidades
 
 - Modificamos el .env para que genere un sqlite (https://www.sqlite.org/index.html)
 - Crear usuario:  php bin/console make:user
 - Formulario de registro: php bin/console make:registration-form (Con email to verify the user's)
 - Formulario de login: php bin/console make:auth (Opción: Login form authenticator)
-- Generar las claves públicas y privadas de jwt: php bin/console lexik:jwt:generate-keypair
+- Generar las claves públicas y privadas de jwt: php bin/console lexik:jwt:generate-keypair. En Windows puede dar error y hay que instalar openSSL: https://slproweb.com/products/Win32OpenSSL.html
 - Actualizamos la base de datos: php bin/console doctrine:schema:update --force (2 queries were executed)
-- En env. añadimos: MAILER_DSN="smtp://xxxxx:yyyyy@smtp1.s.ipzmarketing.com:587" (Actualizar usuario y contraseña)
+- En env. añadimos: MAILER_DSN="smtp://xxxxx:yyyyy@smtp1.s.ipzmarketing.com:587" (Actualizar usuario y contraseña por un servidor de correo)
 - Control de acceso por rol admin en el security.yaml - { path: ^/admin, roles: ROLE_ADMIN }
 - Creamos el controlador de admin: php bin/console make:controller
 - En la base de dato en el usuario seleccionado se puede añadir en rol: ["ROLE_ADMIN"] (Por defecto podría añadir un rol en el entity de user)
@@ -42,10 +41,9 @@ Instalación de Symfony, creación de usuarios con validación por email y acces
 - En el src/Security/AppCustomAutheticator.php en la linea 50 especificar a dónde quieres llegar una vez realizado el login (app_home)
 - Creamos el controlador de home: php bin/console make:controller
 - Configuración del config/packages/security.ymal para el funcionamiento del jwt. Info en: https://symfony.com/bundles/LexikJWTAuthenticationBundle/current/index.html#symfony-5-3-and-higher 
-- La ruta /api/login_check funciona cuando se le envía un usuario y una contraseña
 - Creado un controlador para comprobar el token: ChecktokenController.php
 - Levantar servidor: symfony server:start -d 
-- Hacer pruebas con postman: https://www.postman.com/
+- Hacer pruebas con postman: https://www.postman.com/ Tiene que ser una llamada por GET, type applicacion/json con el user y la contraseña. /api/login_check
 
 <img src="https://jorgebenitezlopez.com/github/postman1.png">
 <img src="https://jorgebenitezlopez.com/github/postman2.png">
