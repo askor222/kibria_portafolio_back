@@ -36,10 +36,13 @@ Instalación de Symfony, creación de usuarios con validación por email y acces
 - Actualizamos la base de datos: php bin/console doctrine:schema:update --force (2 queries were executed)
 - En env. añadimos: MAILER_DSN="smtp://xxxxx:yyyyy@smtp1.s.ipzmarketing.com:587" (Actualizar usuario y contraseña)
 - Control de acceso por rol admin en el security.yaml - { path: ^/admin, roles: ROLE_ADMIN }
+- Creamos el controlador de admin: php bin/console make:controller
 - En la base de dato en el usuario seleccionado se puede añadir en rol: ["ROLE_ADMIN"] (Por defecto podría añadir un rol en el entity de user)
-- En el Registration controller, en la linea 56, cambiar la ruta a home o a la ruta que quieres ir una vez registrado
-- En el src/Security/AppCustomAutheticator.php en la linea 50 especificar a dónde quieres llegar una vez realizado el login
-- Configuración del config/packages/security.ymal para el funcionamiento del jwt 
+- En el Registration controller, en la linea 56, cambiar la ruta a home o a la ruta que quieres ir una vez registrado (Sería bueno llevarle al login)
+- En el src/Security/AppCustomAutheticator.php en la linea 50 especificar a dónde quieres llegar una vez realizado el login (app_home)
+- Creamos el controlador de home: php bin/console make:controller
+- Configuración del config/packages/security.ymal para el funcionamiento del jwt. Info en: https://symfony.com/bundles/LexikJWTAuthenticationBundle/current/index.html#symfony-5-3-and-higher 
+- La ruta /api/login_check funciona cuando se le envía un usuario y una contraseña
 - Creado un controlador para comprobar el token: ChecktokenController.php
 - Levantar servidor: symfony server:start -d 
 - Hacer pruebas con postman: https://www.postman.com/
