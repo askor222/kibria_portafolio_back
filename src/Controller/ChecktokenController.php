@@ -55,6 +55,7 @@ class ChecktokenController extends AbstractController
             'auth' => 'Logado',
             'email' => $user->getEmail()
         ]));
+        
         $response->headers->set('Content-Type', 'application/json');
         $response->headers->set('Access-Control-Allow-Origin', '*');
         $response->headers->set('pass', 'ok');
@@ -72,7 +73,7 @@ class ChecktokenController extends AbstractController
     */
     public function checktoken2(Request $request, UserRepository $userRepository): Response
     {
-        return $this->json(['pass'=> 'Acceso permitido por token'], $status = 200, $headers = ['Access-Control-Allow-Origin'=>'*']);
+        return $this->json(['pass'=> 'Acceso permitido por token', 'info' => 'Información solo accesible para admins'], $status = 200, $headers = ['Access-Control-Allow-Origin'=>'*']);
     }
 
 }
