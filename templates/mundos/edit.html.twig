@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Mundos{% endblock %}
+
+{% block body %}
+    <h1>Edit Mundos</h1>
+
+    {{ include('mundos/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_mundos_index') }}">back to list</a>
+
+    {{ include('mundos/_delete_form.html.twig') }}
+{% endblock %}

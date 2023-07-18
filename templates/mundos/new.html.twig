@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Mundos{% endblock %}
+
+{% block body %}
+    <h1>Create new Mundos</h1>
+
+    {{ include('mundos/_form.html.twig') }}
+
+    <a href="{{ path('app_mundos_index') }}">back to list</a>
+{% endblock %}

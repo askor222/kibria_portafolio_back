@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mundos{% endblock %}
+
+{% block body %}
+    <h1>Mundos</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ mundo.id }}</td>
+            </tr>
+            <tr>
+                <th>Img</th>
+                <td>{{ mundo.img }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_mundos_index') }}">back to list</a>
+
+    <a href="{{ path('app_mundos_edit', {'id': mundo.id}) }}">edit</a>
+
+    {{ include('mundos/_delete_form.html.twig') }}
+{% endblock %}
